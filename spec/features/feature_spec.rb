@@ -19,3 +19,10 @@ feature 'The homepage should have a text box to fill in your name' do
     find('form').visible?
   end
 end
+
+feature 'The homepage asks for your name' do
+  scenario 'the homepage will have the question When is your birthday?' do
+    visit('/')
+    expect(page).to have_content 'When is your birthday?'
+  end
+end
