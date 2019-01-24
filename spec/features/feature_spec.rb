@@ -12,3 +12,10 @@ feature 'The homepage asks for your name' do
     expect(page).to have_content 'What is your name?'
   end
 end
+
+feature 'The homepage should have a text box to fill in your name' do
+  scenario 'under the question of what is your name there should be a text box' do
+    visit('/')
+    find('form').visible?
+  end
+end
