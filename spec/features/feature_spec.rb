@@ -35,3 +35,14 @@ feature 'The homepage asks for your birth day and month' do
     expect(page).to have_content 'Month:'
 end
 end
+
+feature 'The birthday page will tell you that your birthday will be in...' do
+  scenario 'the homepage will have the statment your birthday will be in...' do
+    visit('/')
+    fill_in 'name', with: 'name1'
+    fill_in 'day', with: '15'
+    select 'April', from: 'month'
+    click_button 'Submit'
+    expect(page).to have_content "Your birthday will be in 81 days, Name1"
+  end
+end

@@ -2,6 +2,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rack/test'
 require 'rspec'
+require 'date'
 
 ENV['RACK_ENV'] = 'test'
 
